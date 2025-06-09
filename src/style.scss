@@ -39,6 +39,28 @@ body{
                 justify-content: space-evenly;
                 flex-direction: column;
 
+                .content__header{
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    .volume-btn{
+                        
+                        height: 37px;
+                        position: absolute;
+                        left: 20px;
+                        transition: 0.2s;
+                    }
+
+                    .volume-btn:hover{
+                        cursor: pointer;
+                        opacity: 0.9;
+                    }
+                }
+
                 .profile__title{
                     font-size: 40px;
                     margin: 25px 0;
@@ -100,4 +122,21 @@ body{
 
     }
 
+}
+
+@media (max-width: 570px) {
+    .content{
+        max-width: 400px;
+    }
+
+    .socials{
+        display: flex;
+        justify-content: center;
+    }
+
+    .socials__list{
+        max-width: 400px;
+        margin-top: 20px;
+        margin-left: 40px;  
+    }
 }
