@@ -95,7 +95,7 @@ body{
                         height: 200px;
                         column-count: 2;
                         margin-top: 20px;
-
+                        margin-top: 0;
                         .socials-item{
                             display: flex;
                             justify-content: center;
@@ -109,7 +109,7 @@ body{
                             
                         }
                         
-                        .socials-item a{
+                        .link{
                             color: white;
                             width: 109px;
                             margin-left: 9px;
@@ -204,10 +204,11 @@ body{
         position: absolute;
         bottom: 50px;
         font-size: 30px !important;
+        margin-bottom: 10px;
     }
 
     .content{
-        height: 730px !important;
+        height: 730 px !important;
     }
 
     .socials__list{
