@@ -139,7 +139,6 @@ body{
         object-fit: cover;
         z-index: -1;
         filter: brightness(0.4) saturate(1.2);
-        transition: filter 0.3s ease;
     }
     
     .container {
@@ -186,9 +185,10 @@ body{
         margin-bottom: 10px;
     }
 
+
     .socials-item a {
         font-size: 14px;
-        margin-left: 0;
+        margin-left: 0 !important;
         margin-top: 5px;
         width: 100%;
     }
@@ -199,8 +199,18 @@ body{
     }
 }
 
-@media (max-width: 360px){
+@media (max-width: 420px){
+    .footer__title{
+        position: absolute;
+        bottom: 50px;
+        font-size: 30px !important;
+    }
+
+    .content{
+        height: 730px !important;
+    }
+
     .socials__list{
-        
+       width: 300px !important; 
     }
 }
