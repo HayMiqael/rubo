@@ -1,6 +1,10 @@
 @use './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;700&display=swap');
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 .bg_video {
     position: fixed;
@@ -125,18 +129,78 @@ body{
 }
 
 @media (max-width: 570px) {
-    .content{
-        max-width: 400px;
+
+    .bg_video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.4) saturate(1.2);
+        transition: filter 0.3s ease;
+    }
+    
+    .container {
+        padding: 20px;
     }
 
-    .socials{
+    .content {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content__inner {
+        height: auto;
+    }
+
+    .profile__title,
+    .socials__title,
+    .footer__title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .socials__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
     }
 
+    .socials-item {
+        flex-direction: column;
+        width: 120px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .socials-item a {
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .volume-btn {
+        height: 30px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 360px){
     .socials__list{
-        max-width: 400px;
-        margin-top: 20px;
-        margin-left: 40px;  
+        
     }
 }
